@@ -1,0 +1,695 @@
+{
+ "metrics": [
+  {
+   "Feature set": "Baseline",
+   "Model": "Always \"minor\"",
+   "Accuracy": 0.55125,
+   "Balanced accuracy": 0.3333333333333333,
+   "Macro F1": 0.2369057211925866,
+   "Minor recall": 1.0,
+   "Major recall": 0.0,
+   "Fatal recall": 0.0,
+   "Severe recall": 0.0,
+   "Severe precision": 0.0
+  },
+  {
+   "Feature set": "A: Conditions",
+   "Model": "Decision Tree",
+   "Accuracy": 0.339,
+   "Balanced accuracy": 0.34659085361404496,
+   "Macro F1": 0.32080849114421595,
+   "Minor recall": 0.33151927437641726,
+   "Major recall": 0.3363939899833055,
+   "Fatal recall": 0.37185929648241206,
+   "Severe recall": 0.6818941504178273,
+   "Severe precision": 0.4536693847294292
+  },
+  {
+   "Feature set": "A: Conditions",
+   "Model": "SVM",
+   "Accuracy": 0.32175,
+   "Balanced accuracy": 0.3164912701079104,
+   "Macro F1": 0.29963878595783494,
+   "Minor recall": 0.327437641723356,
+   "Major recall": 0.32220367278797996,
+   "Fatal recall": 0.2998324958123953,
+   "Severe recall": 0.6479108635097494,
+   "Severe precision": 0.4395313681027967
+  },
+  {
+   "Feature set": "B: A + crash outcome",
+   "Model": "Decision Tree",
+   "Accuracy": 0.45275,
+   "Balanced accuracy": 0.5634096395283682,
+   "Macro F1": 0.449988679219604,
+   "Minor recall": 0.3764172335600907,
+   "Major recall": 0.327212020033389,
+   "Fatal recall": 0.9865996649916248,
+   "Severe recall": 0.754874651810585,
+   "Severe precision": 0.49633699633699635
+  },
+  {
+   "Feature set": "B: A + crash outcome",
+   "Model": "SVM",
+   "Accuracy": 0.44325,
+   "Balanced accuracy": 0.5566021474440268,
+   "Macro F1": 0.4392043195075683,
+   "Minor recall": 0.3709750566893424,
+   "Major recall": 0.2988313856427379,
+   "Fatal recall": 1.0,
+   "Severe recall": 0.7409470752089137,
+   "Severe precision": 0.48951048951048953
+  },
+  {
+   "Feature set": "C: B + risk_score",
+   "Model": "Decision Tree",
+   "Accuracy": 0.59175,
+   "Balanced accuracy": 0.6652044160272159,
+   "Macro F1": 0.6622371433474635,
+   "Minor recall": 0.5732426303854875,
+   "Major recall": 0.42237061769616024,
+   "Fatal recall": 1.0,
+   "Severe recall": 0.6155988857938719,
+   "Severe precision": 0.5400782013685239
+  },
+  {
+   "Feature set": "C: B + risk_score",
+   "Model": "SVM",
+   "Accuracy": 0.57425,
+   "Balanced accuracy": 0.6598322727347292,
+   "Macro F1": 0.6538338628085066,
+   "Minor recall": 0.5229024943310657,
+   "Major recall": 0.4565943238731219,
+   "Fatal recall": 1.0,
+   "Severe recall": 0.6389972144846797,
+   "Severe precision": 0.5216007276034561
+  }
+ ],
+ "confusion": {
+  "A: Conditions|Decision Tree": [
+   [
+    731,
+    690,
+    784
+   ],
+   [
+    386,
+    403,
+    409
+   ],
+   [
+    185,
+    190,
+    222
+   ]
+  ],
+  "A: Conditions|SVM": [
+   [
+    722,
+    712,
+    771
+   ],
+   [
+    420,
+    386,
+    392
+   ],
+   [
+    212,
+    206,
+    179
+   ]
+  ],
+  "B: A + crash outcome|Decision Tree": [
+   [
+    830,
+    723,
+    652
+   ],
+   [
+    440,
+    392,
+    366
+   ],
+   [
+    0,
+    8,
+    589
+   ]
+  ],
+  "B: A + crash outcome|SVM": [
+   [
+    818,
+    720,
+    667
+   ],
+   [
+    465,
+    358,
+    375
+   ],
+   [
+    0,
+    0,
+    597
+   ]
+  ],
+  "C: B + risk_score|Decision Tree": [
+   [
+    1264,
+    938,
+    3
+   ],
+   [
+    690,
+    506,
+    2
+   ],
+   [
+    0,
+    0,
+    597
+   ]
+  ],
+  "C: B + risk_score|SVM": [
+   [
+    1153,
+    1048,
+    4
+   ],
+   [
+    648,
+    547,
+    3
+   ],
+   [
+    0,
+    0,
+    597
+   ]
+  ]
+ },
+ "importance": {
+  "A: Conditions": {
+   "road_type": 0.059437755432673725,
+   "weather": 0.046971785827592996,
+   "visibility": 0.03391548138287426,
+   "lighting": 0.034221667274151456,
+   "traffic_density": 0.05880892751545881,
+   "cause": 0.05148427988898575,
+   "city": 0.08084987288427287,
+   "day_of_week": 0.08897238540670989,
+   "festival": 0.004212326464674814,
+   "hour": 0.14287848037204118,
+   "lanes": 0.0891244262148827,
+   "temperature": 0.14875610045039855,
+   "traffic_signal": 0.01362557508540554,
+   "is_peak_hour": 0.016231503140878324,
+   "is_weekend": 0.009539876265422215,
+   "month": 0.12096955639357701
+  },
+  "B: A + crash outcome": {
+   "road_type": 0.003739771274488616,
+   "weather": 0.001374115659985442,
+   "visibility": 0.002651402259384178,
+   "lighting": 0.004455210675436802,
+   "traffic_density": 0.0016771001948370401,
+   "cause": 0.006116832785555837,
+   "city": 0.0057767168406743325,
+   "day_of_week": 0.0033382487320429326,
+   "festival": 0.0,
+   "hour": 0.015078893066916187,
+   "lanes": 0.004631890207243232,
+   "temperature": 0.012016248798327404,
+   "traffic_signal": 0.009628299294938327,
+   "is_peak_hour": 0.0017522225602605629,
+   "is_weekend": 0.0018247915486544954,
+   "month": 0.007133159738854497,
+   "vehicles_involved": 0.42151231878491513,
+   "casualties": 0.497292777577485
+  },
+  "C: B + risk_score": {
+   "road_type": 0.0053476697605522455,
+   "weather": 0.015494204261752414,
+   "visibility": 0.180711478118632,
+   "lighting": 0.001253357551472364,
+   "traffic_density": 0.17095532860393242,
+   "cause": 0.006494714284809924,
+   "city": 0.007295223738760301,
+   "day_of_week": 0.007563640948505865,
+   "festival": 0.0,
+   "hour": 0.014282350384227222,
+   "lanes": 0.008612123018007036,
+   "temperature": 0.023848201604316114,
+   "traffic_signal": 0.004704975097428888,
+   "is_peak_hour": 0.00466524695576228,
+   "is_weekend": 0.0012653794437257632,
+   "month": 0.010366363080073363,
+   "vehicles_involved": 0.01960575786326104,
+   "casualties": 0.07199476409105633,
+   "risk_score": 0.4455392211937244
+  }
+ },
+ "by_type": [
+  {
+   "Variable": "accident_severity",
+   "Type": "fatal",
+   "n": 597,
+   "A: Conditions|Decision Tree": 0.37185929648241206,
+   "A: Conditions|SVM": 0.2998324958123953,
+   "B: A + crash outcome|Decision Tree": 0.9865996649916248,
+   "B: A + crash outcome|SVM": 1.0,
+   "C: B + risk_score|Decision Tree": 1.0,
+   "C: B + risk_score|SVM": 1.0
+  },
+  {
+   "Variable": "accident_severity",
+   "Type": "major",
+   "n": 1198,
+   "A: Conditions|Decision Tree": 0.3363939899833055,
+   "A: Conditions|SVM": 0.32220367278797996,
+   "B: A + crash outcome|Decision Tree": 0.327212020033389,
+   "B: A + crash outcome|SVM": 0.2988313856427379,
+   "C: B + risk_score|Decision Tree": 0.42237061769616024,
+   "C: B + risk_score|SVM": 0.4565943238731219
+  },
+  {
+   "Variable": "accident_severity",
+   "Type": "minor",
+   "n": 2205,
+   "A: Conditions|Decision Tree": 0.33151927437641726,
+   "A: Conditions|SVM": 0.327437641723356,
+   "B: A + crash outcome|Decision Tree": 0.3764172335600907,
+   "B: A + crash outcome|SVM": 0.3709750566893424,
+   "C: B + risk_score|Decision Tree": 0.5732426303854875,
+   "C: B + risk_score|SVM": 0.5229024943310657
+  },
+  {
+   "Variable": "weather",
+   "Type": "clear",
+   "n": 1311,
+   "A: Conditions|Decision Tree": 0.34172387490465295,
+   "A: Conditions|SVM": 0.3188405797101449,
+   "B: A + crash outcome|Decision Tree": 0.4500381388253242,
+   "B: A + crash outcome|SVM": 0.4454614797864226,
+   "C: B + risk_score|Decision Tree": 0.5873379099923722,
+   "C: B + risk_score|SVM": 0.5728451563691839
+  },
+  {
+   "Variable": "weather",
+   "Type": "fog",
+   "n": 1372,
+   "A: Conditions|Decision Tree": 0.3228862973760933,
+   "A: Conditions|SVM": 0.30685131195335275,
+   "B: A + crash outcome|Decision Tree": 0.4446064139941691,
+   "B: A + crash outcome|SVM": 0.43731778425655976,
+   "C: B + risk_score|Decision Tree": 0.597667638483965,
+   "C: B + risk_score|SVM": 0.565597667638484
+  },
+  {
+   "Variable": "weather",
+   "Type": "rain",
+   "n": 1317,
+   "A: Conditions|Decision Tree": 0.3530751708428246,
+   "A: Conditions|SVM": 0.340167046317388,
+   "B: A + crash outcome|Decision Tree": 0.4639331814730448,
+   "B: A + crash outcome|SVM": 0.4472285497342445,
+   "C: B + risk_score|Decision Tree": 0.5899772209567198,
+   "C: B + risk_score|SVM": 0.5846621108580107
+  },
+  {
+   "Variable": "road_type",
+   "Type": "highway",
+   "n": 1324,
+   "A: Conditions|Decision Tree": 0.3557401812688822,
+   "A: Conditions|SVM": 0.297583081570997,
+   "B: A + crash outcome|Decision Tree": 0.4509063444108761,
+   "B: A + crash outcome|SVM": 0.438821752265861,
+   "C: B + risk_score|Decision Tree": 0.5725075528700906,
+   "C: B + risk_score|SVM": 0.5717522658610272
+  },
+  {
+   "Variable": "road_type",
+   "Type": "rural",
+   "n": 1338,
+   "A: Conditions|Decision Tree": 0.336322869955157,
+   "A: Conditions|SVM": 0.3505231689088191,
+   "B: A + crash outcome|Decision Tree": 0.4491778774289985,
+   "B: A + crash outcome|SVM": 0.44245142002989535,
+   "C: B + risk_score|Decision Tree": 0.5799701046337817,
+   "C: B + risk_score|SVM": 0.5881913303437967
+  },
+  {
+   "Variable": "road_type",
+   "Type": "urban",
+   "n": 1338,
+   "A: Conditions|Decision Tree": 0.3251121076233184,
+   "A: Conditions|SVM": 0.31689088191330345,
+   "B: A + crash outcome|Decision Tree": 0.4581464872944694,
+   "B: A + crash outcome|SVM": 0.4484304932735426,
+   "C: B + risk_score|Decision Tree": 0.6225710014947683,
+   "C: B + risk_score|SVM": 0.5627802690582959
+  },
+  {
+   "Variable": "lighting",
+   "Type": "dark",
+   "n": 1517,
+   "A: Conditions|Decision Tree": 0.3230059327620303,
+   "A: Conditions|SVM": 0.3005932762030323,
+   "B: A + crash outcome|Decision Tree": 0.4396835860250494,
+   "B: A + crash outcome|SVM": 0.43309162821357944,
+   "C: B + risk_score|Decision Tree": 0.5880026367831246,
+   "C: B + risk_score|SVM": 0.5695451549110085
+  },
+  {
+   "Variable": "lighting",
+   "Type": "dawn/dusk",
+   "n": 659,
+   "A: Conditions|Decision Tree": 0.3323216995447648,
+   "A: Conditions|SVM": 0.3566009104704097,
+   "B: A + crash outcome|Decision Tree": 0.4779969650986343,
+   "B: A + crash outcome|SVM": 0.4658573596358118,
+   "C: B + risk_score|Decision Tree": 0.6100151745068285,
+   "C: B + risk_score|SVM": 0.6039453717754173
+  },
+  {
+   "Variable": "lighting",
+   "Type": "daylight",
+   "n": 1824,
+   "A: Conditions|Decision Tree": 0.35471491228070173,
+   "A: Conditions|SVM": 0.3267543859649123,
+   "B: A + crash outcome|Decision Tree": 0.4544956140350877,
+   "B: A + crash outcome|SVM": 0.44353070175438597,
+   "C: B + risk_score|Decision Tree": 0.5882675438596491,
+   "C: B + risk_score|SVM": 0.5674342105263158
+  },
+  {
+   "Variable": "traffic_density",
+   "Type": "high",
+   "n": 1438,
+   "A: Conditions|Decision Tree": 0.3442280945757997,
+   "A: Conditions|SVM": 0.33657858136300417,
+   "B: A + crash outcome|Decision Tree": 0.45549374130737136,
+   "B: A + crash outcome|SVM": 0.46870653685674546,
+   "C: B + risk_score|Decision Tree": 0.60778859527121,
+   "C: B + risk_score|SVM": 0.5945757997218358
+  },
+  {
+   "Variable": "traffic_density",
+   "Type": "low",
+   "n": 1403,
+   "A: Conditions|Decision Tree": 0.3414112615823236,
+   "A: Conditions|SVM": 0.32002851033499646,
+   "B: A + crash outcome|Decision Tree": 0.43193157519600855,
+   "B: A + crash outcome|SVM": 0.4240912330719886,
+   "C: B + risk_score|Decision Tree": 0.5894511760513186,
+   "C: B + risk_score|SVM": 0.5730577334283677
+  },
+  {
+   "Variable": "traffic_density",
+   "Type": "medium",
+   "n": 1159,
+   "A: Conditions|Decision Tree": 0.32959447799827435,
+   "A: Conditions|SVM": 0.30543572044866263,
+   "B: A + crash outcome|Decision Tree": 0.4745470232959448,
+   "B: A + crash outcome|SVM": 0.43485763589301124,
+   "C: B + risk_score|Decision Tree": 0.5746333045729077,
+   "C: B + risk_score|SVM": 0.5504745470232959
+  },
+  {
+   "Variable": "cause",
+   "Type": "distraction",
+   "n": 838,
+   "A: Conditions|Decision Tree": 0.36992840095465396,
+   "A: Conditions|SVM": 0.35799522673031026,
+   "B: A + crash outcome|Decision Tree": 0.4295942720763723,
+   "B: A + crash outcome|SVM": 0.44272076372315033,
+   "C: B + risk_score|Decision Tree": 0.5727923627684964,
+   "C: B + risk_score|SVM": 0.5608591885441527
+  },
+  {
+   "Variable": "cause",
+   "Type": "drunk driving",
+   "n": 738,
+   "A: Conditions|Decision Tree": 0.32791327913279134,
+   "A: Conditions|SVM": 0.3075880758807588,
+   "B: A + crash outcome|Decision Tree": 0.45934959349593496,
+   "B: A + crash outcome|SVM": 0.4634146341463415,
+   "C: B + risk_score|Decision Tree": 0.6124661246612466,
+   "C: B + risk_score|SVM": 0.6016260162601627
+  },
+  {
+   "Variable": "cause",
+   "Type": "overspeeding",
+   "n": 783,
+   "A: Conditions|Decision Tree": 0.3243933588761175,
+   "A: Conditions|SVM": 0.3001277139208174,
+   "B: A + crash outcome|Decision Tree": 0.4661558109833972,
+   "B: A + crash outcome|SVM": 0.44189016602809705,
+   "C: B + risk_score|Decision Tree": 0.5887611749680716,
+   "C: B + risk_score|SVM": 0.5402298850574713
+  },
+  {
+   "Variable": "cause",
+   "Type": "poor road",
+   "n": 824,
+   "A: Conditions|Decision Tree": 0.33495145631067963,
+   "A: Conditions|SVM": 0.3131067961165049,
+   "B: A + crash outcome|Decision Tree": 0.46359223300970875,
+   "B: A + crash outcome|SVM": 0.44902912621359226,
+   "C: B + risk_score|Decision Tree": 0.587378640776699,
+   "C: B + risk_score|SVM": 0.5983009708737864
+  },
+  {
+   "Variable": "cause",
+   "Type": "weather",
+   "n": 817,
+   "A: Conditions|Decision Tree": 0.3353733170134639,
+   "A: Conditions|SVM": 0.3268053855569155,
+   "B: A + crash outcome|Decision Tree": 0.4467564259485924,
+   "B: A + crash outcome|SVM": 0.42105263157894735,
+   "C: B + risk_score|Decision Tree": 0.5997552019583844,
+   "C: B + risk_score|SVM": 0.5716034271725826
+  },
+  {
+   "Variable": "visibility",
+   "Type": "high",
+   "n": 1311,
+   "A: Conditions|Decision Tree": 0.34172387490465295,
+   "A: Conditions|SVM": 0.3188405797101449,
+   "B: A + crash outcome|Decision Tree": 0.4500381388253242,
+   "B: A + crash outcome|SVM": 0.4454614797864226,
+   "C: B + risk_score|Decision Tree": 0.5873379099923722,
+   "C: B + risk_score|SVM": 0.5728451563691839
+  },
+  {
+   "Variable": "visibility",
+   "Type": "low",
+   "n": 2035,
+   "A: Conditions|Decision Tree": 0.33366093366093363,
+   "A: Conditions|SVM": 0.32334152334152333,
+   "B: A + crash outcome|Decision Tree": 0.45847665847665847,
+   "B: A + crash outcome|SVM": 0.4452088452088452,
+   "C: B + risk_score|Decision Tree": 0.5995085995085995,
+   "C: B + risk_score|SVM": 0.5739557739557739
+  },
+  {
+   "Variable": "visibility",
+   "Type": "medium",
+   "n": 654,
+   "A: Conditions|Decision Tree": 0.35015290519877673,
+   "A: Conditions|SVM": 0.32262996941896027,
+   "B: A + crash outcome|Decision Tree": 0.44036697247706424,
+   "B: A + crash outcome|SVM": 0.4327217125382263,
+   "C: B + risk_score|Decision Tree": 0.5764525993883792,
+   "C: B + risk_score|SVM": 0.5779816513761468
+  },
+  {
+   "Variable": "vehicles_involved",
+   "Type": "1",
+   "n": 842,
+   "A: Conditions|Decision Tree": 0.32422802850356297,
+   "A: Conditions|SVM": 0.33847980997624705,
+   "B: A + crash outcome|Decision Tree": 0.35748218527315917,
+   "B: A + crash outcome|SVM": 0.3646080760095012,
+   "C: B + risk_score|Decision Tree": 0.5795724465558195,
+   "C: B + risk_score|SVM": 0.5581947743467933
+  },
+  {
+   "Variable": "vehicles_involved",
+   "Type": "2",
+   "n": 798,
+   "A: Conditions|Decision Tree": 0.35964912280701755,
+   "A: Conditions|SVM": 0.3258145363408521,
+   "B: A + crash outcome|Decision Tree": 0.44360902255639095,
+   "B: A + crash outcome|SVM": 0.44110275689223055,
+   "C: B + risk_score|Decision Tree": 0.5776942355889725,
+   "C: B + risk_score|SVM": 0.5927318295739349
+  },
+  {
+   "Variable": "vehicles_involved",
+   "Type": "3",
+   "n": 776,
+   "A: Conditions|Decision Tree": 0.3002577319587629,
+   "A: Conditions|SVM": 0.32603092783505155,
+   "B: A + crash outcome|Decision Tree": 0.4690721649484536,
+   "B: A + crash outcome|SVM": 0.4729381443298969,
+   "C: B + risk_score|Decision Tree": 0.615979381443299,
+   "C: B + risk_score|SVM": 0.5902061855670103
+  },
+  {
+   "Variable": "vehicles_involved",
+   "Type": "4",
+   "n": 800,
+   "A: Conditions|Decision Tree": 0.34375,
+   "A: Conditions|SVM": 0.30625,
+   "B: A + crash outcome|Decision Tree": 0.4925,
+   "B: A + crash outcome|SVM": 0.46375,
+   "C: B + risk_score|Decision Tree": 0.6075,
+   "C: B + risk_score|SVM": 0.55875
+  },
+  {
+   "Variable": "vehicles_involved",
+   "Type": "5",
+   "n": 784,
+   "A: Conditions|Decision Tree": 0.3673469387755102,
+   "A: Conditions|SVM": 0.3112244897959184,
+   "B: A + crash outcome|Decision Tree": 0.5076530612244898,
+   "B: A + crash outcome|SVM": 0.47959183673469385,
+   "C: B + risk_score|Decision Tree": 0.5790816326530612,
+   "C: B + risk_score|SVM": 0.5727040816326531
+  },
+  {
+   "Variable": "city",
+   "Type": "Bangalore",
+   "n": 475,
+   "A: Conditions|Decision Tree": 0.2968421052631579,
+   "A: Conditions|SVM": 0.32842105263157895,
+   "B: A + crash outcome|Decision Tree": 0.4610526315789474,
+   "B: A + crash outcome|SVM": 0.45052631578947366,
+   "C: B + risk_score|Decision Tree": 0.5852631578947368,
+   "C: B + risk_score|SVM": 0.5915789473684211
+  },
+  {
+   "Variable": "city",
+   "Type": "Chandigarh",
+   "n": 538,
+   "A: Conditions|Decision Tree": 0.34572490706319703,
+   "A: Conditions|SVM": 0.31226765799256506,
+   "B: A + crash outcome|Decision Tree": 0.4758364312267658,
+   "B: A + crash outcome|SVM": 0.4795539033457249,
+   "C: B + risk_score|Decision Tree": 0.587360594795539,
+   "C: B + risk_score|SVM": 0.6003717472118959
+  },
+  {
+   "Variable": "city",
+   "Type": "Chennai",
+   "n": 527,
+   "A: Conditions|Decision Tree": 0.34345351043643263,
+   "A: Conditions|SVM": 0.3206831119544592,
+   "B: A + crash outcome|Decision Tree": 0.4155597722960152,
+   "B: A + crash outcome|SVM": 0.4060721062618596,
+   "C: B + risk_score|Decision Tree": 0.5616698292220114,
+   "C: B + risk_score|SVM": 0.5464895635673624
+  },
+  {
+   "Variable": "city",
+   "Type": "Delhi",
+   "n": 515,
+   "A: Conditions|Decision Tree": 0.287378640776699,
+   "A: Conditions|SVM": 0.3300970873786408,
+   "B: A + crash outcome|Decision Tree": 0.45436893203883494,
+   "B: A + crash outcome|SVM": 0.458252427184466,
+   "C: B + risk_score|Decision Tree": 0.5825242718446602,
+   "C: B + risk_score|SVM": 0.6155339805825243
+  },
+  {
+   "Variable": "city",
+   "Type": "Hyderabad",
+   "n": 470,
+   "A: Conditions|Decision Tree": 0.32553191489361705,
+   "A: Conditions|SVM": 0.3127659574468085,
+   "B: A + crash outcome|Decision Tree": 0.4531914893617021,
+   "B: A + crash outcome|SVM": 0.4425531914893617,
+   "C: B + risk_score|Decision Tree": 0.6042553191489362,
+   "C: B + risk_score|SVM": 0.5319148936170213
+  },
+  {
+   "Variable": "city",
+   "Type": "Kolkata",
+   "n": 472,
+   "A: Conditions|Decision Tree": 0.3644067796610169,
+   "A: Conditions|SVM": 0.3622881355932203,
+   "B: A + crash outcome|Decision Tree": 0.4809322033898305,
+   "B: A + crash outcome|SVM": 0.4809322033898305,
+   "C: B + risk_score|Decision Tree": 0.6207627118644068,
+   "C: B + risk_score|SVM": 0.6122881355932204
+  },
+  {
+   "Variable": "city",
+   "Type": "Mumbai",
+   "n": 490,
+   "A: Conditions|Decision Tree": 0.39591836734693875,
+   "A: Conditions|SVM": 0.2938775510204082,
+   "B: A + crash outcome|Decision Tree": 0.42857142857142855,
+   "B: A + crash outcome|SVM": 0.3693877551020408,
+   "C: B + risk_score|Decision Tree": 0.6040816326530613,
+   "C: B + risk_score|SVM": 0.49387755102040815
+  },
+  {
+   "Variable": "city",
+   "Type": "Pune",
+   "n": 513,
+   "A: Conditions|Decision Tree": 0.35282651072124754,
+   "A: Conditions|SVM": 0.3157894736842105,
+   "B: A + crash outcome|Decision Tree": 0.45419103313840153,
+   "B: A + crash outcome|SVM": 0.4580896686159844,
+   "C: B + risk_score|Decision Tree": 0.5925925925925926,
+   "C: B + risk_score|SVM": 0.5984405458089669
+  },
+  {
+   "Variable": "festival",
+   "Type": "Diwali",
+   "n": 5,
+   "A: Conditions|Decision Tree": 0.4,
+   "A: Conditions|SVM": 0.4,
+   "B: A + crash outcome|Decision Tree": 0.6,
+   "B: A + crash outcome|SVM": 0.4,
+   "C: B + risk_score|Decision Tree": 0.0,
+   "C: B + risk_score|SVM": 0.4
+  },
+  {
+   "Variable": "festival",
+   "Type": "Eid",
+   "n": 10,
+   "A: Conditions|Decision Tree": 0.2,
+   "A: Conditions|SVM": 0.5,
+   "B: A + crash outcome|Decision Tree": 0.3,
+   "B: A + crash outcome|SVM": 0.5,
+   "C: B + risk_score|Decision Tree": 0.4,
+   "C: B + risk_score|SVM": 0.5
+  },
+  {
+   "Variable": "festival",
+   "Type": "Holi",
+   "n": 9,
+   "A: Conditions|Decision Tree": 0.5555555555555556,
+   "A: Conditions|SVM": 0.3333333333333333,
+   "B: A + crash outcome|Decision Tree": 0.5555555555555556,
+   "B: A + crash outcome|SVM": 0.4444444444444444,
+   "C: B + risk_score|Decision Tree": 0.7777777777777778,
+   "C: B + risk_score|SVM": 0.3333333333333333
+  },
+  {
+   "Variable": "festival",
+   "Type": "None",
+   "n": 3976,
+   "A: Conditions|Decision Tree": 0.33878269617706236,
+   "A: Conditions|SVM": 0.3211770623742455,
+   "B: A + crash outcome|Decision Tree": 0.45271629778672035,
+   "B: A + crash outcome|SVM": 0.443158953722334,
+   "C: B + risk_score|Decision Tree": 0.5925553319919518,
+   "C: B + risk_score|SVM": 0.5752012072434608
+  }
+ ]
+}
